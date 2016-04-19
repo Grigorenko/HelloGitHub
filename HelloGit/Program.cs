@@ -12,7 +12,7 @@ namespace HelloGit
         {
             int pow = n;
 
-            for (int i = 0; i < x-1; i++)
+            for (int i = 0; i < x - 1; i++)
             {
                 pow *= n;
             }
@@ -24,7 +24,7 @@ namespace HelloGit
         {
             int res = 1;
 
-            for (int i = 1; i < n+1; i++)
+            for (int i = 1; i < n + 1; i++)
             {
                 res *= i;
             }
@@ -36,11 +36,25 @@ namespace HelloGit
         {
             Console.WriteLine("Hello GitHub");
 
-            Console.WriteLine("2 в степени 3 = "+Pow(2,3));
+            Console.WriteLine("2 в степени 3 = " + Pow(2, 3));
 
             Console.WriteLine("Факториал 5 = " + Fact(5));
 
+            Console.WriteLine("x^2-2b+1 = "+QuadraticEq(1,-2,1));
+
             Console.ReadKey();
+        }
+
+        static int QuadraticEq(int a, int b, int c)
+        {
+            int d = Pow(b, 2) - 4 * a * c;
+
+            if (d == 0)
+            {
+                return -b / (2 * a);
+            }
+
+            return -1;
         }
     }
 }
