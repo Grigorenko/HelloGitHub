@@ -40,7 +40,8 @@ namespace HelloGit
 
             Console.WriteLine("Факториал 5 = " + Fact(5));
 
-            Console.WriteLine("x^2-2b+1 = "+QuadraticEq(1,-2,1));
+            if (QuadraticEq(1, -2, 1) != -1)
+                Console.WriteLine("x^2-2b+1 = " + QuadraticEq(1, -2, 1));
 
             Console.ReadKey();
         }
